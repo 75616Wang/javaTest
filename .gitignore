@@ -2,18 +2,16 @@
  # Java class files
   *.class
  
- # generated files
- bin/
- gen/
- .metadata/
- .recommender/
- RemoteSystemsTempFiles/
- .settings/
- # Local configuration file (sdk path, etc)
- local.properties
+# generated files
+bin/
+gen/
+.metadata/
+.recommender/
+RemoteSystemsTempFiles/
+.settings/
  
- # Eclipse project files
- .classpath
- .project
+
+.classpath
+.project
  
 .DS_Store
