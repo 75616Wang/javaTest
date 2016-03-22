@@ -1,0 +1,9 @@
+package com.test1;
+
+public class GPA {
+	double []result=new double[5];
+	
+	public static void main(String[] args) {
+		
+	}
+}

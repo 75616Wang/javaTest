@@ -1,0 +1,35 @@
+package com.test1;
+
+public class GPA {
+	double []result=new double[5];
+	int []credit=new int [5];
+	double gpa;
+	public GPA(double res[]) {
+		double sum=0;
+		double sumC=0;
+		for(int i=0;i<res.length;i++)
+		{
+			result[i]=res[i];
+			if (res[i]>=85) {
+				credit[i]=4;
+			}
+			else if (res[i]>=75) {
+				credit[i]=3;
+			}
+			else if(res[i]>=60) {
+				credit[i]=2;
+			}
+			else if (res[i]>45){
+				credit[i]=1;
+			}
+			else {
+				credit[i]=0;
+			}
+			sum+=res[i]*credit[i];
+		}
+		
+	}
+	public static void main(String[] args) {
+		
+	}
+}
