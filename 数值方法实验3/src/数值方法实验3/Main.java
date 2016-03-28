@@ -16,20 +16,23 @@ public class Main {
 			result[i]=0;
 			result0[i]=0;
 		}
-		for(int i=0;i<result.length;i++)
-		{
-			result[i]=0;
-			for(int j=0;j<equation[i].length-1;j++)
+		while (true) {
+			for(int i=0;i<result.length;i++)
 			{
-				if (i==j) {
-					continue;
+				result[i]=0;
+				for(int j=0;j<equation[i].length-1;j++)
+				{
+					if (i==j) continue;
+					result[i]-=result0[j]*equation[i][j]/equation[i][i];
 				}
-				result[i]-=result0[j]*equation[i][j]/equation[i][i];
+				result[i]+=equation[i][equation[i].length-1]/equation[i][i];
 			}
-			result[i]+=equation[i][equation[i].length-1]/equation[i][i];
+			swap(result0, result);
+			if (Math.abs(result[0]-result0[0])<=0.0000001) break;
 		}
 	}
 	void show(){
+		System.out.println("The result is:");
 		for(int i=0;i<result.length;i++)
 			System.out.println("x"+(i+1)+"="+result[i]);
 	}
